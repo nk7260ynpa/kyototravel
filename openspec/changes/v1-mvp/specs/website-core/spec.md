@@ -2,7 +2,7 @@
 
 ## ADDED Requirements
 
-### REQ-001: Hero Section
+### Requirement: Hero Section
 The system SHALL display a hero section with a background image, title, subtitle, and CTA button.
 
 #### Scenario: User lands on homepage
@@ -14,7 +14,7 @@ The system SHALL display a hero section with a background image, title, subtitle
   - 簡短描述文字
   - CTA 按鈕可滾動至景點區塊
 
-### REQ-002: Attractions Section
+### Requirement: Attractions Section
 The system SHALL display at least 6 attraction cards with photo, name, description, season, and ticket info.
 
 #### Scenario: User browses attractions
@@ -27,7 +27,7 @@ The system SHALL display at least 6 attraction cards with photo, name, descripti
   - 推薦造訪季節
   - 門票資訊
 
-### REQ-003: Food Section
+### Requirement: Food Section
 The system SHALL display a food recommendation section with restaurant details.
 
 #### Scenario: User browses food recommendations
@@ -38,7 +38,7 @@ The system SHALL display a food recommendation section with restaurant details.
   - 料理類型與價格範圍
   - 地址與營業時間
 
-### REQ-004: Transportation Section
+### Requirement: Transportation Section
 The system SHALL display a transportation guide for getting to and around Kyoto.
 
 #### Scenario: User checks transportation info
@@ -49,38 +49,10 @@ The system SHALL display a transportation guide for getting to and around Kyoto.
   - 京都市內交通（巴士、地鐵）
   - 推薦票券資訊
 
-### REQ-005: Itinerary Section
+### Requirement: Itinerary Section
 The system SHALL display suggested travel itineraries.
 
 #### Scenario: User views itinerary suggestions
 - GIVEN the user scrolls to the itinerary section
 - WHEN the section is visible
-- THEN at least two itineraries are displayed:
-  - 一日遊路線含時間安排
-  - 兩日遊路線含時間安排與交通方式
-
-### REQ-006: Responsive Design
-The system SHALL be fully responsive across mobile, tablet, and desktop.
-
-#### Scenario: User views on mobile device
-- GIVEN the user opens the site on a device with width < 768px
-- WHEN the page renders
-- THEN all sections stack vertically and remain readable
-
-#### Scenario: User views on desktop
-- GIVEN the user opens the site on a device with width >= 1024px
-- WHEN the page renders
-- THEN content uses multi-column grid layouts
-
-### REQ-007: Navigation Bar
-The system SHALL include a fixed top navigation bar with anchor links.
-
-#### Scenario: User navigates via navbar on desktop
-- GIVEN the user is on any part of the page
-- WHEN the user clicks a nav link
-- THEN the page smooth-scrolls to the corresponding section
-
-#### Scenario: User navigates via hamburger menu on mobile
-- GIVEN the user is on a mobile device
-- WHEN the user taps the hamburger icon
-- THEN a dropdown menu appears with all section links
+- THEN at least two itineraries are displaye
