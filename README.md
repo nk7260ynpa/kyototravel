@@ -22,13 +22,17 @@
 
 ```
 kyototravel/
-├── index.html          # 主頁面
+├── index.html              # 主頁面
 ├── css/
-│   └── style.css       # 自訂樣式
+│   └── style.css           # 自訂樣式
 ├── js/
-│   └── main.js         # JavaScript 邏輯
-├── images/             # 圖片資源
-├── openspec/           # OpenSpec 規格文件
+│   └── main.js             # JavaScript 邏輯
+├── images/                 # 圖片資源
+├── docker/
+│   ├── Dockerfile          # Docker image 定義
+│   └── docker-compose.yml  # Docker Compose 設定
+├── run.sh                  # 啟動腳本
+├── openspec/               # OpenSpec 規格文件
 │   ├── project.md
 │   ├── config.yaml
 │   ├── specs/
@@ -38,4 +42,30 @@ kyototravel/
 
 ## 使用方法
 
-直接在瀏覽器中開啟 `index.html` 即可瀏覽網頁。
+### 直接開啟
+
+在瀏覽器中開啟 `index.html` 即可瀏覽網頁。
+
+### Docker 啟動
+
+使用 `run.sh` 一鍵啟動：
+
+```bash
+./run.sh
+```
+
+或手動執行 Docker 指令：
+
+```bash
+# 建立 Docker image
+docker build -t kyototravel -f docker/Dockerfile .
+
+# 使用 Docker Compose 啟動
+docker compose -f docker/docker-compose.yml up -d
+
+# 瀏覽網頁
+open http://localhost:8888
+
+# 停止容器
+docker compose -f docker/docker-compose.yml down
+```
