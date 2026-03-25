@@ -1,0 +1,9 @@
+/* 平滑滾動 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 導覽列錨點偏移，避免被固定導覽列遮擋 */
+section[id] {
+  scroll-margin-top: 4rem;
+}
