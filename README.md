@@ -1,6 +1,6 @@
 # 京都旅遊指南 Kyoto Travel Guide
 
-一個介紹京都旅遊資訊的靜態網頁，包含景點推薦、美食推薦、交通資訊與行程規劃。
+一個介紹京都旅遊資訊的靜態網頁，包含景點推薦、美食推薦、交通資訊、行程規劃與互動式公車路線地圖。
 
 ## 功能
 
@@ -9,6 +9,7 @@
 - 美食推薦（4 間推薦餐廳）
 - 交通指南（城際與市內交通、推薦票券）
 - 建議行程（一日遊與兩日遊路線）
+- 巴士路線地圖（Leaflet.js 互動式地圖，4 條觀光路線）
 - 固定導覽列與 Mobile hamburger menu
 - 響應式設計（Mobile / Tablet / Desktop）
 
@@ -16,6 +17,7 @@
 
 - HTML + CSS + JavaScript
 - Tailwind CSS（CDN）
+- Leaflet.js（CDN）+ OpenStreetMap
 - 純靜態網站，無需後端
 
 ## 專案架構
@@ -23,10 +25,13 @@
 ```
 kyototravel/
 ├── index.html              # 主頁面
+├── map.html                # 巴士路線地圖頁面
 ├── css/
 │   └── style.css           # 自訂樣式
 ├── js/
-│   └── main.js             # JavaScript 邏輯
+│   ├── main.js             # 首頁 JavaScript 邏輯
+│   ├── map.js              # 地圖互動邏輯
+│   └── map-data.js         # 公車路線座標資料
 ├── images/                 # 圖片資源
 ├── docker/
 │   ├── Dockerfile          # Docker image 定義
@@ -44,7 +49,7 @@ kyototravel/
 
 ### 直接開啟
 
-在瀏覽器中開啟 `index.html` 即可瀏覽網頁。
+在瀏覽器中開啟 `index.html` 即可瀏覽首頁，開啟 `map.html` 可查看巴士路線地圖。
 
 ### Docker 啟動
 

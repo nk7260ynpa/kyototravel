@@ -32,4 +32,4 @@
 ## 5. Docker 與文件更新
 
 - [x] 5.1 修改 `docker/Dockerfile` 加入 `COPY map.html`
-- [ ] 5.2 更新 `README.md` 功能說明與專案架構
+- [x] 5.2 更新 `README.md` 功能說明與專案架構
