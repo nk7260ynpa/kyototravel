@@ -26,7 +26,7 @@
 
 - [x] 4.1 修改 `index.html` 導覽列（桌面版）加入「巴士地圖」連結
 - [x] 4.2 修改 `index.html` 導覽列（手機版）加入「巴士地圖」連結
-- [ ] 4.3 修改 `index.html` Footer 加入地圖頁連結
+- [x] 4.3 修改 `index.html` Footer 加入地圖頁連結
 - [ ] 4.4 更新 `css/style.css` 加入地圖頁面專用樣式
 
 ## 5. Docker 與文件更新
