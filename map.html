@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>巴士路線地圖 - 京都旅遊指南</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- 導覽列 -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="text-xl font-bold text-rose-700">京都旅遊指南</a>
+        <!-- Desktop 選單 -->
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html#hero" class="text-gray-600 hover:text-rose-700 transition">首頁</a>
+          <a href="index.html#attractions" class="text-gray-600 hover:text-rose-700 transition">景點</a>
+          <a href="index.html#food" class="text-gray-600 hover:text-rose-700 transition">美食</a>
+          <a href="index.html#transport" class="text-gray-600 hover:text-rose-700 transition">交通</a>
+          <a href="index.html#itinerary" class="text-gray-600 hover:text-rose-700 transition">行程</a>
+          <a href="map.html" class="text-rose-700 font-semibold">巴士地圖</a>
+        </div>
+        <!-- Hamburger 按鈕 -->
+        <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-gray-100" aria-label="開啟選單">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile 選單 -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="index.html#hero" class="block py-2 text-gray-600 hover:text-rose-700">首頁</a>
+        <a href="index.html#attractions" class="block py-2 text-gray-600 hover:text-rose-700">景點</a>
+        <a href="index.html#food" class="block py-2 text-gray-600 hover:text-rose-700">美食</a>
+        <a href="index.html#transport" class="block py-2 text-gray-600 hover:text-rose-700">交通</a>
+        <a href="index.html#itinerary" class="block py-2 text-gray-600 hover:text-rose-700">行程</a>
+        <a href="map.html" class="block py-2 text-rose-700 font-semibold">巴士地圖</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 地圖容器 -->
+  <div id="map" class="map-container"></div>
+
+  <!-- 圖例面板 -->
+  <div id="legend" class="legend-panel">
+    <div class="legend-header">
+      <h3 class="text-lg font-semibold">公車路線圖例</h3>
+      <button id="legend-close" class="md:hidden text-gray-400 hover:text-gray-600">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div id="legend-routes" class="legend-routes"></div>
+    <div class="legend-actions">
+      <button id="show-all" class="legend-btn bg-rose-700 hover:bg-rose-800 text-white">全部顯示</button>
+      <button id="hide-all" class="legend-btn bg-gray-200 hover:bg-gray-300 text-gray-700">全部隱藏</button>
+    </div>
+  </div>
+
+  <!-- 手機版圖例按鈕 -->
+  <button id="legend-toggle" class="legend-toggle md:hidden">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+    </svg>
+  </button>
+
+  <script src="js/map-data.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

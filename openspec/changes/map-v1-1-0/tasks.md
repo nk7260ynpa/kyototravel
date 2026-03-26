@@ -8,7 +8,7 @@
 
 ## 2. 地圖頁面結構
 
-- [ ] 2.1 建立 `map.html`，包含 HTML 基本結構、Tailwind CSS CDN、Leaflet CDN
+- [x] 2.1 建立 `map.html`，包含 HTML 基本結構、Tailwind CSS CDN、Leaflet CDN
 - [ ] 2.2 實作導覽列（含返回首頁各區塊連結與手機版漢堡選單）
 - [ ] 2.3 加入全高度地圖容器 `<div id="map">`
 - [ ] 2.4 加入圖例面板 HTML（路線勾選框、全部顯示/隱藏按鈕）
